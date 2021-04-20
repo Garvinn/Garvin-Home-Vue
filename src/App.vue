@@ -1,21 +1,21 @@
 <template>
-  <img class="logo" alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld :msg="msg"/>
-  <div class="btn">
-    <el-button type="primary" @click="startHacking">
-      Get Started
-    </el-button>
-  </div>
+
+  <HelloWorld/>
+
+
 </template>
 
 <script>
-import { ref } from 'vue'
+import {ref} from 'vue'
 import HelloWorld from './components/HelloWorld.vue'
 
 export default {
   name: 'App',
   components: {
     HelloWorld
+  },
+  data() {
+    return {}
   },
   setup() {
     const msg = ref("Welcome to Element Plus, a Vue 3.0 based component library")
@@ -26,6 +26,9 @@ export default {
       msg,
       startHacking
     }
+  },
+  created() {
+
   }
 }
 </script>
@@ -36,13 +39,29 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  font-family: 江城圆体;
 }
+
 .logo {
   width: 50%;
 }
+
 .btn {
   margin-top: 100px;
 }
+
+body {
+  font-size: 18px;
+  color: beige;
+  background-color: #ebf1f5;
+  background-image: url('assets/background.jpg');
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  min-height: 800px;
+  background-position: center;
+}
+
+
 </style>
